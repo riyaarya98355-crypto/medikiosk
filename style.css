@@ -1,0 +1,110 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eef2f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  color: #1a5276;
+  margin-bottom: 5px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
+}
+
+.doctor-card {
+  border-top: 5px solid #27ae60;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input, select, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-voice {
+  background-color: #2980b9;
+  color: white;
+}
+
+.btn-submit {
+  background-color: #16a085;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-approve {
+  background-color: #27ae60;
+  color: white;
+  width: 100%;
+}
+
+.summary-box {
+  background-color: #f8f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #d5dbdb;
+}
+
+.symptom-box {
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 4px solid #2980b9;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+}
+
+.badge-pending {
+  background-color: #e67e22;
+}
+
+.badge-approved {
+  background-color: #27ae60;
+}

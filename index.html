@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MediKiosk - Patient Intake Prototype</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏥 MediKiosk Patient Intake Platform</h1>
+      <p>Problem Statement ID: 26047 | Team MedByte</p>
+    </header>
+
+    <div class="card">
+      <h2>Step 1 & 2: Patient Registration & Symptoms</h2>
+      <div class="form-group">
+        <input type="text" id="patientName" placeholder="Patient Full Name" required>
+        <input type="number" id="patientAge" placeholder="Age" style="width: 30%;" required>
+        <select id="patientGender" style="width: 30%;">
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <textarea id="symptomsText" rows="4" placeholder="Describe your symptoms here or click the voice button below..."></textarea>
+      </div>
+
+      <div class="button-group">
+        <button type="button" class="btn-voice" onclick="startVoiceInput()">🎤 Speak Symptoms (Voice-to-Text)</button>
+      </div>
+
+      <div class="form-group" style="margin-top: 15px;">
+        <label><strong>Step 4: Upload Medical Report (OCR Scan):</strong></label><br>
+        <input type="file" id="documentUpload" accept="image/*" onchange="processOCR()">
+        <p id="ocrStatus" style="font-size: 12px; color: #666;"></p>
+      </div>
+
+      <button type="button" class="btn-submit" onclick="processAndSubmitCase()">🚀 Generate Clinical Intake Sheet</button>
+    </div>
+
+    <div class="card doctor-card">
+      <h2>Step 5 & 6: Doctor Review & Approval Panel</h2>
+      <div id="summaryOutput">
+        <p style="color: #777;"><i>No active patient case loaded. Complete Step 1 & 2 above to view generated intake summary.</i></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
